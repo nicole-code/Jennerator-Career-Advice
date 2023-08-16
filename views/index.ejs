@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@800&family=Padauk&display=swap" rel="stylesheet">
+  </head>
+
+    
+      <body class="index-body"> 
+         
+              <% if (user) { %>
+                <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+              <% } else { %>
+                <a href="/auth/google"><i class="material-icons left"></i>Log In</a>
+              <% } %>
+          
+              
+    </body>
+  
+</html>

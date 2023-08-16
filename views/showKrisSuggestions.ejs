@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@800&family=Big+Shoulders+Stencil+Display:wght@600&family=Monoton&family=Train+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@800&family=Padauk&display=swap" rel="stylesheet">
+    <title>The Jennerator Suggests</title>
+</head>
+<body>
+    <% if (user) { %>
+        <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+      <% } else { %>
+        <a href="/auth/google"><i class="material-icons left"></i>Log In</a>
+      <% } %>
+      <a href="/interests/savedSuggestions">My Saved Suggestions</a>
+    <h1>Based on your interest in <%=interests%></h1>
+    <h1>The <div class="Jennerator">Jennerator</div> Suggests:<br> <%=suggestion%></h1>
+
+    <form action="/interests/savedSuggestions" method="POST">
+       <input id="hide-suggestion" name = "suggestion" type="text" value="<%=suggestion%>"></input>
+        <button type="submit">Save Kris' Suggestion</button>
+    </form>
+        <br>
+    <form action="/interests/new" method="GET">
+        <button type="submit">I won't give you 10% for this - Choose Another Interest</button>
+    </form>
+    <div id="kris-suggests"><img src="/images/kj.png"></div>
+
+</body>
+</html>

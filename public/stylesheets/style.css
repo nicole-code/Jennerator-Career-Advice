@@ -1,0 +1,67 @@
+body {
+  background-color: #A9A9A9	;
+  padding: 50px;
+  font-family: 'Padauk', sans-serif;
+  font-size: large;
+  color: whitesmoke;
+  text-align: center;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#hide-suggestion {
+  display: none
+}
+
+button {
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color: gray;
+  text-align:center;
+  transition: all 0.2s;
+}
+
+.Jennerator {
+  font-family: 'Big Shoulders Inline Text', cursive;
+  font-size: 80px;
+  color: lightskyblue;
+}
+
+.bigger {
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.big {
+  font-size: 30px;
+}
+
+#new-form {
+  font-size: 30px;
+}
+
+.index-body {
+  background-image: url("/images/indexpage.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+#kris-suggests {
+  display: flex;
+  background-color: #A9A9A9;
+  padding: 5px;
+  height: 250px;
+  width: 250px;
+  justify-content: right;
+}

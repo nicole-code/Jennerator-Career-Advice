@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@800&family=Padauk&display=swap" rel="stylesheet"> 
+    <title>Saved Jennerator Suggestions</title>
+</head>
+<body>
+  <% if (user) { %>
+    <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+  <% } else { %>
+    <a href="/auth/google"><i class="material-icons left"></i>Log In</a>
+  <% } %>
+    <a href="/interests/new">New Suggestion</a>
+
+    <h1>Your Saved Suggestions</h1>
+    
+    <% for (let s of user.suggestions) { %>
+      <br>
+    <%= s.suggestion%>
+      <br>
+    <form action="/interests/savedSuggestions?_method=DELETE"
+      class="delete-form" method="POST">
+      <br>
+      <button>No thank you, Kris.</button>
+      <br>
+    </form>
+    <% } %>
+  
+   
+</body>
+</html>
+
+
+  
+             
+    

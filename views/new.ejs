@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@800&family=Padauk&display=swap" rel="stylesheet">
+    <title>Tell Kris Your Interests</title>
+</head>
+<body>
+    <% if (user) { %>
+        <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+      <% } else { %>
+        <a href="/auth/google"><i class="material-icons left"></i>Log In</a>
+      <% } %>
+      <a href="/interests/savedSuggestions">My Saved Suggestions</a>
+   
+    <h1 class="bigger">You're doing amazing, sweetie!</h1>
+    <h2>...or are you?</h2>
+    <h3 class ="big">Tell Momager™️ Kris Jenner what you're interested in and she will help you choose a new career path</h3>
+    
+    <form id =new-from action= "/interests/showmekrissuggestion" method="POST">
+        <label class="big" for="interests">Choose your interest</label>
+        <br>
+        <br>
+        <select id="intersts" name="interests">
+            <option value="Visual Arts">Visual Arts</option>
+            <option value="Performing Arts">Performing Arts</option>
+            <option value="Communication and Media">Communication and Media</option>
+            <option value="Education">Education</option>
+            <option value="Government">Government</option>
+            <option value="Law">Law</option>
+            <option value="Retail">Retail</option>
+            <option value="Technology">Technology</option>
+            <option value="Event Planning">Event Planning</option>
+            <option value="Insurance">Insurance</option>
+            <option value="Business and Marketing">Business and Marketing</option>      
+        </select>
+            <br>
+            <br>
+        <button type="submit">Help me, Kris!</button>
+    </form>
+    <div id="kris-suggests"><img src="/images/kj.png"></div>
+</body>
+</html>
